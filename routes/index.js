@@ -10,8 +10,9 @@ router.get('/', function(req, res, next) {
 router.get('/sites', function(req, res, next) {
   res.sendfile('public/page/index.html');
 });
-router.get('/sites/categories', function(req, res, next) {
-  res.sendfile('public/page/categories.html');
+router.get('/sites/categories/:id', function(req, res, next) {
+  var id=req.param("id");
+  res.render('category');
 });
 
 router.get('/saludo', function(req, res, next) {

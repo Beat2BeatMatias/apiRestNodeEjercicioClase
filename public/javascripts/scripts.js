@@ -22,7 +22,7 @@ request.onload = function () {
       card.onclick=function(){
         console.log(site.id);
         //window.open("categories.html?id="+site_id,"_self");
-        window.location.assign("/sites/categories?id="+site.id);
+        window.location.assign("/sites/categories/"+site.id);
       };
 
       var h1 = document.createElement('h1');

@@ -1,6 +1,9 @@
-var url_string = window.location.href
-var url = new URL(url_string);
-var siteId= url.searchParams.get("id");
+var url_string = window.location.pathname;
+var p=/M../;
+var siteId=p.exec(url_string);
+// var url = new URL(url_string);
+// var siteId= url.searchParams.get("id");
+console.log(siteId);
 var endPoint="https://api.mercadolibre.com/sites/" + siteId + "/categories";
 var app = document.getElementById('root');
 var request = new XMLHttpRequest();
